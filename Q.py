@@ -55,7 +55,6 @@ class QLearner:
         self.verbose = verbose
 
     def Qlearning_agent(self, verbose):
-
         self.step_count = 1
 
         for episode in range(self.max_num_episodes):
@@ -89,7 +88,6 @@ class QLearner:
 
 
     def get_first_actions(self, s):
-
         first_actions = {}
 
         first_actions['A'] = rand.randint(0, self.num_actions - 1)
@@ -99,8 +97,8 @@ class QLearner:
 
         return first_actions
 
-    def update_Q(self, state_prime, r, player_name):
 
+    def update_Q(self, state_prime, r, player_name):
         # epsilon-greedy selection function
         state_index = self.all_states[self.state]
         state_prime_index = self.all_states[state_prime]
@@ -119,8 +117,6 @@ class QLearner:
 
         self.q_tables[player_name][state_index, self.actions[player_name]] += error
 
-        # print self.q_tables[player_name]
-
         # collect errors
         if player_name == 'A' and self.state == 'B21' and self.actions['A'] == 1 and error != 0.0:
             self.ERRs.append(abs(error))
@@ -131,7 +127,6 @@ class QLearner:
         return action
 
     def plot_error(self, experiment_id):
-
         err_to_plot = self.ERRs[::20]
         step_to_plot = self.steps_to_plot[::20]
 
