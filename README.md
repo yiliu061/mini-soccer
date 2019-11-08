@@ -47,8 +47,8 @@ In the following experiment, the convergence of each algorithm is evaluated by c
 
 For Q learning, the plot reflects player A’s Q-values, corresponding to state s and action S, and for other algorithms, it reflects player A’s Q-values corresponding to states, with player A taking action S and player B sticking. Each experiment
 is run for 10<sup>6</sup> time steps.
-
-<img src="graphs/fig4_ceQ.png" alt="Convergence in the soccer game." width=230><img src="graphs/fig4_foeQ.png" width=230><img src="graphs/fig4_friQ.png" width=230><img src="graphs/fig4_Q.png" width=230>
+<img src="graphs/fig4_foeQ.png" width=200><img src="graphs/fig4_friQ.png" width=200><img src="graphs/fig4_Q.png" width=200>
+<img src="graphs/fig4_ceQ.png" alt="Convergence in the soccer game." width=200>
 
 ## Reference
 
